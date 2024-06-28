@@ -7,27 +7,24 @@
           "type": "product-medias",
           "settings": {
             "product": "{{ section.settings.product }}",
-            "layout": {
-              "flex-direction": "column"
-            },
+            "media_featured": true,
             "size": {
               "width": "100%",
               "flex-grow": "1"
-            },
-            "media_featured": true
+            }
           }
         },
         "c0e7c161-3f86-4580-b1d2-5d6f96428237": {
           "type": "group",
           "settings": {
+            "spacing": {
+              "padding": "20px"
+            },
             "layout": {
               "flex-direction": "column",
               "justify-content": "flex-start",
               "align-items": "flex-start",
               "gap": "5px"
-            },
-            "spacing": {
-              "padding": "20px"
             },
             "color_scheme": ""
           },
@@ -71,7 +68,6 @@
               "settings": {
                 "product": "{{ section.settings.product }}",
                 "show_dynamic_checkout": true,
-
                 "spacing": {
                   "padding": "15px 0"
                 }
@@ -86,22 +82,24 @@
             "group_a3Nwet": {
               "type": "group",
               "settings": {
-                "layout": {
-                  "flex-direction": "column",
-                  "align-items": "flex-start",
-                  "gap": "0px"
-                },
                 "size": {
                   "width": "100%"
                 },
                 "spacing": {
                   "padding": "0"
                 },
+                "layout": {
+                  "flex-direction": "column",
+                  "align-items": "flex-start",
+                  "gap": "0px"
+                },
                 "color_scheme": ""
               },
               "blocks": {
                 "collapsible_row_WEBEnL": {
                   "type": "collapsible-row",
+                  "settings": {
+                  },
                   "blocks": {
                     "text_YBKTLB": {
                       "type": "text",
@@ -129,7 +127,8 @@
                             "width": 22
                           }
                         }
-                      }
+                      },
+                      "block_order": null
                     }
                   },
                   "block_order": [
@@ -138,6 +137,8 @@
                 },
                 "collapsible_row_EYqA3x": {
                   "type": "collapsible-row",
+                  "settings": {
+                  },
                   "blocks": {
                     "text_MgMBnY": {
                       "type": "text",
@@ -165,7 +166,8 @@
                             "width": 22
                           }
                         }
-                      }
+                      },
+                      "block_order": null
                     }
                   },
                   "block_order": [
@@ -174,6 +176,8 @@
                 },
                 "collapsible_row_9p3U44": {
                   "type": "collapsible-row",
+                  "settings": {
+                  },
                   "blocks": {
                     "text_WMFJKg": {
                       "type": "text",
@@ -201,7 +205,8 @@
                             "width": 22
                           }
                         }
-                      }
+                      },
+                      "block_order": null
                     }
                   },
                   "block_order": [
@@ -234,12 +239,7 @@
       ],
       "settings": {
         "product": "{{ product }}",
-        "flex-direction": "row",
-        "justify-content": "center",
-        "color_scheme": "",
-        "full_width": false,
-        "padding_top": 30,
-        "padding_bottom": 30
+        "color_scheme": ""
       }
     }
   },

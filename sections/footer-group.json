@@ -8,19 +8,18 @@
         "5b635cb0-c1b4-408f-a776-d6977e4ff9d4": {
           "type": "group",
           "settings": {
-            "layout": {
-              "flex-direction": "row",
-              "justify-content": "center"
-            },
             "size": {
               "width": "100%"
             },
             "spacing": {
               "padding": "32px",
-
               "@media (--mobile)": {
                 "padding": "0"
               }
+            },
+            "layout": {
+              "flex-direction": "row",
+              "justify-content": "center"
             },
             "color_scheme": "scheme-3"
           },
@@ -116,20 +115,19 @@
         "group_VFkXXa": {
           "type": "group",
           "settings": {
-            "layout": {
-              "flex-direction": "row",
-              "justify-content": "center",
-              "align-items": "flex-start"
-            },
             "size": {
               "width": "100%"
             },
             "spacing": {
               "padding": "16px",
-
               "@media (--mobile)": {
                 "padding": "0"
               }
+            },
+            "layout": {
+              "flex-direction": "row",
+              "justify-content": "center",
+              "align-items": "flex-start"
             },
             "color_scheme": "scheme-3"
           },
@@ -137,17 +135,16 @@
             "group_reBQFj": {
               "type": "group",
               "settings": {
+                "spacing": {
+                  "padding": "16px",
+                  "@media (--mobile)": {
+                    "padding": "16px 0px"
+                  }
+                },
                 "layout": {
                   "flex-direction": "column",
                   "justify-content": "flex-start",
                   "align-items": "flex-start"
-                },
-                "spacing": {
-                  "padding": "16px",
-
-                  "@media (--mobile)": {
-                    "padding": "16px 0px"
-                  }
                 },
                 "color_scheme": "scheme-3"
               },
@@ -192,17 +189,16 @@
             "group_XWypQL": {
               "type": "group",
               "settings": {
+                "spacing": {
+                  "padding": "16px",
+                  "@media (--mobile)": {
+                    "padding": "16px 0px"
+                  }
+                },
                 "layout": {
                   "flex-direction": "column",
                   "justify-content": "flex-start",
                   "align-items": "flex-start"
-                },
-                "spacing": {
-                  "padding": "16px",
-
-                  "@media (--mobile)": {
-                    "padding": "16px 0px"
-                  }
                 },
                 "color_scheme": "scheme-3"
               },
@@ -238,16 +234,16 @@
         "8a18b664-2c69-4e8a-b6ae-a5cf39d3ad38": {
           "type": "group",
           "settings": {
-            "layout": {
-              "flex-direction": "column",
-              "justify-content": "center",
-              "align-items": "center"
-            },
             "size": {
               "width": "100%"
             },
             "spacing": {
               "padding": "0"
+            },
+            "layout": {
+              "flex-direction": "column",
+              "justify-content": "center",
+              "align-items": "center"
             },
             "color_scheme": "scheme-3"
           },
@@ -255,19 +251,18 @@
             "group_L9Ac4q": {
               "type": "group",
               "settings": {
-                "layout": {
-                  "flex-direction": "row",
-                  "justify-content": "center"
-                },
                 "size": {
                   "width": "50%",
-
                   "@media (--mobile)": {
                     "width": "100%"
                   }
                 },
                 "spacing": {
                   "padding": "0"
+                },
+                "layout": {
+                  "flex-direction": "row",
+                  "justify-content": "center"
                 },
                 "color_scheme": "scheme-3"
               },
@@ -285,19 +280,18 @@
             "group_WQUiKt": {
               "type": "group",
               "settings": {
-                "layout": {
-                  "flex-direction": "row",
-                  "justify-content": "center"
-                },
                 "size": {
                   "width": "50%",
-
                   "@media (--mobile)": {
                     "width": "100%"
                   }
                 },
                 "spacing": {
                   "padding": "0"
+                },
+                "layout": {
+                  "flex-direction": "row",
+                  "justify-content": "center"
                 },
                 "color_scheme": "scheme-3"
               },
@@ -345,14 +339,13 @@
         "8a18b664-2c69-4e8a-b6ae-a5cf39d3ad38"
       ],
       "settings": {
+        "spacing": {
+          "padding": "40px 20px"
+        },
         "layout": {
           "flex-direction": "column",
           "justify-content": "flex-start"
         },
-        "spacing": {
-          "padding": "40px 20px"
-        },
-
         "color_scheme": "scheme-3"
       }
     }

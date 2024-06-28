@@ -37,12 +37,12 @@
         "link_xg7d8w"
       ],
       "settings": {
+        "spacing": {
+          "padding": "100px 0"
+        },
         "layout": {
           "flex-direction": "column",
           "justify-content": "center"
-        },
-        "spacing": {
-          "padding": "100px 0"
         },
         "color_scheme": "scheme-2"
       }

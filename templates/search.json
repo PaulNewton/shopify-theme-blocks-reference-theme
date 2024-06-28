@@ -16,12 +16,12 @@
         "text_bckUWt"
       ],
       "settings": {
+        "spacing": {
+          "padding": "100px 0px"
+        },
         "layout": {
           "flex-direction": "row",
           "justify-content": "center"
-        },
-        "spacing": {
-          "padding": "100px 0px"
         },
         "color_scheme": "scheme-2"
       }
