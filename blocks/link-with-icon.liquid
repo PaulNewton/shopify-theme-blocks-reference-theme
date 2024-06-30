@@ -19,6 +19,7 @@
     {%- comment -%}nested_block: {{ nested_block }}, nested_block type: {{ nested_block.type }}<br>{%- endcomment -%}
     {%- comment -%}nested_block: {{ nested_block | json }}<br>{%- endcomment -%}
     nested_block.settings.icon: {{ nested_block.settings | json }}<br>
+
     {% if nested_block.type == 'icon' %}  nested_block.type == 'icon'  {%- endif -%}
 
     {%- if nested_block.settings.icon != 'none' -%}
