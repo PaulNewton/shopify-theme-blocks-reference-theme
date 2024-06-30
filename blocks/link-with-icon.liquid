@@ -1,5 +1,5 @@
 {%- comment -%}{% assign icon_block = block.blocks | where:'type', 'icon' %}{%- endcomment -%}
-{% assign icon_block = block.blocks | where:'name', 'Icon' %}
+{% assign icon_block = block.blocks | where:'type', 'Icon' %}
 {% render icon_block %}
 end render icon_block <br><br>
 
