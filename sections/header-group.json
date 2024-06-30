@@ -34,10 +34,26 @@
                 "icon": "apple",
                 "width": 44
               }
+            },
+            "icon_Yrqw8j": {
+              "type": "icon",
+              "settings": {
+                "icon": "banana",
+                "width": 44
+              }
+            },
+            "icon_49AHLq": {
+              "type": "icon",
+              "settings": {
+                "icon": "bottle",
+                "width": 44
+              }
             }
           },
           "block_order": [
-            "icon_BDGrJP"
+            "icon_BDGrJP",
+            "icon_Yrqw8j",
+            "icon_49AHLq"
           ]
         }
       },
