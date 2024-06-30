@@ -1,22 +1,6 @@
-<div>
-begin nested_block in block.blocks <br>
-  {% for nested_block in block.blocks %}
-    {%- comment -%}aka block in block.blocks{%- endcomment -%}
-    {% render nested_block %}
-  {% endfor %}
-end nested_block in block.blocks <br>
-
-begin parent block nested_block in parent.blocks <br>
-{% assign parent = block %}
-{%- comment -%}parent.settings: {{ parent.settings | json }}<br>{%- endcomment -%}
-{% for nested_block in parent.blocks %}
-   <div data-parent-settings-json-url-escaped="{{parent.settings | json | url_escape }}" data-parent-settings-json-single-quoted-attribute-value='{{ parent.settings }}'>
-      {% render nested_block %}
-   </div>
-{% endfor %}
-end parent block nested_block in parent.blocks <br><br>
-<div>
-
+{% assign icon_block = blocks | where:'name', 'icon' %}
+{% render icon_block %}
+end render icon_block <br>
 <a
   href="{{ block.settings.link }}"
   class="{{ block.settings | class_list }} link-block link-block-icon-{{ block.settings.icon_position }} {{ block.settings.style_class }}{% if block.settings.icon != "none" %} link--with-icon{% endif %}"
@@ -25,53 +9,13 @@ end parent block nested_block in parent.blocks <br><br>
   {%- endif -%}
   {{ block.shopify_attributes }}
 >
-  {%- comment -%}Documented usage to render a block:
-    {% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}
-  {%- endcomment -%}
-  {%- comment -%}{% content_for "block" , type: "icon", id: "icon" %}{%- endcomment -%}
 
-  {%- comment -%} works
-    {% liquid # works
-      assign type = "icon"
-      assign id = "icon"
-      content_for "block" , type: "icon", id: "icon"
-    %}
-  {%- endcomment -%}
+  {%- comment -%}{% content_for "blocks" %}{%- endcomment -%}
 
-  {%- comment -%} Does not work: Variable usage in content_for "block" tag parameters
-    {% liquid
-      # works
-      assign type = "icon"
-      assign id = "icon"
-      content_for "block" , type: type, id: type
-    %}
-    {% liquid
-      assign type = "icon"
-      assign id = "icon"
-    %}
-    {% content_for "block" , type: type, id: id %}
-  {%- endcomment -%}
-
-  {% content_for "blocks" %}
-  {%- comment -%}{% assign icon_block = content_for "blocks" | where:'type': 'icon' %}{%- endcomment -%}
-  {%- comment -%}{% assign icon_block = content_for_blocks | where:'type', 'icon' %}{%- endcomment -%}
-  {%- comment -%}{% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}{%- endcomment -%}
-  {%- comment -%}{% assign icon_block = content_for_blocks | where:'type', '@theme' | where:'type', 'icon' %}{%- endcomment -%}
-  {%- comment -%}{% assign icon_block = content_for_blocks , type: "icon", id: "icon" %}{%- endcomment -%}
-  {%- comment -%}does not work
-    {% for block in section.blocks %}
-    {% endfor %}
-    {% for block in blocks %}
-    {% endfor %}
-  {%- endcomment -%}
-
-
-  {%- comment -%}{% assign icon_block = blocks | where:'type', 'icon' %}{%- endcomment -%}
-  {%- comment -%}icon_block: {{ icon_block | json }}{%- endcomment -%}
   {% for block in block.blocks %}
-    block: {{ block }}, block type: {{ block.type }}<br>
-    block: {{ block | json }}<br>
-    block.settings.icon: {{ block.settings.icon }}<br>
+    {%- comment -%}block: {{ block }}, block type: {{ block.type }}<br>{%- endcomment -%}
+    {%- comment -%}block: {{ block | json }}<br>{%- endcomment -%}
+    {%- comment -%}block.settings.icon: {{ block.settings.icon }}<br>{%- endcomment -%}
     {% if block.type == 'icon' %}
       {%- comment -%}{{ block }}{%- endcomment -%}
       {%- if block.settings.icon != 'none' -%}
