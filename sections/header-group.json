@@ -81,6 +81,7 @@
       "block_order": [
         "9358ead7-959e-4cdd-b971-5a08e53c7729"
       ],
+      "disabled": true,
       "settings": {
         "spacing": {
           "padding-block-start": "24px",
@@ -224,6 +225,7 @@
         "group_QwzE6T",
         "group_MMGbDg"
       ],
+      "disabled": true,
       "settings": {
         "spacing": {
           "padding-block-start": "30px",
