@@ -13,6 +13,7 @@
     {%- comment -%}block: {{ block | json }}<br>{%- endcomment -%}
     {%- comment -%}block.settings.icon: {{ block.settings.icon }}<br>{%- endcomment -%}
     {% if block.type == 'icon' %}    {%- endif -%}
+      {% render block %}
 
       {%- comment -%}{{ block }}{%- endcomment -%}
       {%- if block.settings.icon != 'none' -%}
