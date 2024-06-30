@@ -53,6 +53,7 @@ end nested_block in block.blocks <br>
 
 begin parent block nested_block in parent.blocks <br>
 {% assign parent = block %}
+parent.settings: {{ parent.settings }}<br>
 {% for nested_block in parent.blocks %}
    <div data-foo="parent.settings.bar">
       {% render nested_block %}
