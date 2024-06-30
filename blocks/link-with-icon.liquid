@@ -11,22 +11,29 @@
   {%- endcomment -%}
   {% content_for "block" , type: "icon", id: "icon" %}
 
-  {% liquid
-    # works
-    assign type = "icon"
-    assign id = "icon"
-    content_for "block" , type: "icon", id: "icon"
-  %}
+  {%- comment -%} works
+    {% liquid # works
+      assign type = "icon"
+      assign id = "icon"
+      content_for "block" , type: "icon", id: "icon"
+    %}
+  {%- endcomment -%}
 
-  {%- comment -%}
-    Does not work Variable usage in content_for "block" tag parameters 
+  {%- comment -%} Does not work: Variable usage in content_for "block" tag parameters
+    {% liquid
+      # works
+      assign type = "icon"
+      assign id = "icon"
+      content_for "block" , type: type, id: type
+    %}
     {% liquid
       assign type = "icon"
       assign id = "icon"
     %}
     {% content_for "block" , type: type, id: id %}
   {%- endcomment -%}
-  {%- comment -%}{% content_for "blocks" %}{%- endcomment -%}
+
+  {% content_for "blocks" %}
   {%- comment -%}{% assign icon_block = content_for "blocks" | where:'type': 'icon' %}{%- endcomment -%}
   {%- comment -%}{% assign icon_block = content_for_blocks | where:'type', 'icon' %}{%- endcomment -%}
   {%- comment -%}{% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}{%- endcomment -%}
