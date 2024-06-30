@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "type": "footer",
   "name": "Footer group",
@@ -8,19 +17,24 @@
         "5b635cb0-c1b4-408f-a776-d6977e4ff9d4": {
           "type": "group",
           "settings": {
-            "layout": {
-              "flex-direction": "row",
-              "justify-content": "center"
-            },
             "size": {
               "width": "100%"
             },
             "spacing": {
-              "padding": "32px",
-
+              "padding-block-start": "32px",
+              "padding-inline-end": "32px",
+              "padding-block-end": "32px",
+              "padding-inline-start": "32px",
               "@media (--mobile)": {
-                "padding": "0"
+                "padding-block-start": "0px",
+                "padding-inline-end": "0px",
+                "padding-block-end": "0px",
+                "padding-inline-start": "0px"
               }
+            },
+            "layout": {
+              "flex-direction": "row",
+              "justify-content": "center"
             },
             "color_scheme": "scheme-3"
           },
@@ -33,7 +47,11 @@
                 "style_class": "link",
                 "open_in_new_tab": false,
                 "icon": "facebook",
-                "icon_position": "left"
+                "icon_position": "left",
+                "size": {
+                },
+                "spacing": {
+                }
               }
             },
             "fe27ca06-6185-474c-8c9a-40107d6c28df": {
@@ -44,7 +62,11 @@
                 "style_class": "link",
                 "open_in_new_tab": false,
                 "icon": "instagram",
-                "icon_position": "left"
+                "icon_position": "left",
+                "size": {
+                },
+                "spacing": {
+                }
               }
             },
             "d930cb7c-bf9b-4d68-9858-0476cb895b19": {
@@ -55,7 +77,11 @@
                 "style_class": "link",
                 "open_in_new_tab": false,
                 "icon": "pinterest",
-                "icon_position": "left"
+                "icon_position": "left",
+                "size": {
+                },
+                "spacing": {
+                }
               }
             },
             "02a44ad5-639e-4850-b541-ccd97beae61b": {
@@ -66,7 +92,11 @@
                 "style_class": "link",
                 "open_in_new_tab": false,
                 "icon": "snapchat",
-                "icon_position": "left"
+                "icon_position": "left",
+                "size": {
+                },
+                "spacing": {
+                }
               }
             },
             "710961e1-8fee-48b8-a16e-bedc585eb74e": {
@@ -77,7 +107,11 @@
                 "style_class": "link",
                 "open_in_new_tab": false,
                 "icon": "tiktok",
-                "icon_position": "left"
+                "icon_position": "left",
+                "size": {
+                },
+                "spacing": {
+                }
               }
             },
             "40095e17-a6ec-47d5-ac80-7167ad63f29e": {
@@ -88,7 +122,11 @@
                 "style_class": "link",
                 "open_in_new_tab": false,
                 "icon": "tumblr",
-                "icon_position": "left"
+                "icon_position": "left",
+                "size": {
+                },
+                "spacing": {
+                }
               }
             },
             "61868283-b9f6-4e7b-9937-76d1dc8b5dfe": {
@@ -99,7 +137,11 @@
                 "style_class": "link",
                 "open_in_new_tab": false,
                 "icon": "twitter",
-                "icon_position": "left"
+                "icon_position": "left",
+                "size": {
+                },
+                "spacing": {
+                }
               }
             }
           },
@@ -116,20 +158,25 @@
         "group_VFkXXa": {
           "type": "group",
           "settings": {
-            "layout": {
-              "flex-direction": "row",
-              "justify-content": "center",
-              "align-items": "flex-start"
-            },
             "size": {
               "width": "100%"
             },
             "spacing": {
-              "padding": "16px",
-
+              "padding-block-start": "16px",
+              "padding-inline-end": "16px",
+              "padding-block-end": "16px",
+              "padding-inline-start": "16px",
               "@media (--mobile)": {
-                "padding": "0"
+                "padding-block-start": "0px",
+                "padding-inline-end": "0px",
+                "padding-block-end": "0px",
+                "padding-inline-start": "0px"
               }
+            },
+            "layout": {
+              "flex-direction": "row",
+              "justify-content": "center",
+              "align-items": "flex-start"
             },
             "color_scheme": "scheme-3"
           },
@@ -137,17 +184,24 @@
             "group_reBQFj": {
               "type": "group",
               "settings": {
+                "size": {
+                },
+                "spacing": {
+                  "padding-block-start": "16px",
+                  "padding-inline-end": "16px",
+                  "padding-block-end": "16px",
+                  "padding-inline-start": "16px",
+                  "@media (--mobile)": {
+                    "padding-block-start": "16px",
+                    "padding-inline-end": "0px",
+                    "padding-block-end": "16px",
+                    "padding-inline-start": "0px"
+                  }
+                },
                 "layout": {
                   "flex-direction": "column",
                   "justify-content": "flex-start",
                   "align-items": "flex-start"
-                },
-                "spacing": {
-                  "padding": "16px",
-
-                  "@media (--mobile)": {
-                    "padding": "16px 0px"
-                  }
                 },
                 "color_scheme": "scheme-3"
               },
@@ -157,7 +211,11 @@
                   "settings": {
                     "heading": "Get to know us",
                     "heading_size": "h3",
-                    "alignment": "start"
+                    "alignment": "start",
+                    "size": {
+                    },
+                    "spacing": {
+                    }
                   }
                 },
                 "link_AJyYJ4": {
@@ -168,7 +226,11 @@
                     "style_class": "link",
                     "open_in_new_tab": false,
                     "icon": "arrow",
-                    "icon_position": "right"
+                    "icon_position": "right",
+                    "size": {
+                    },
+                    "spacing": {
+                    }
                   }
                 },
                 "link_BGUyPc": {
@@ -179,7 +241,11 @@
                     "style_class": "link",
                     "open_in_new_tab": false,
                     "icon": "arrow",
-                    "icon_position": "right"
+                    "icon_position": "right",
+                    "size": {
+                    },
+                    "spacing": {
+                    }
                   }
                 }
               },
@@ -192,17 +258,24 @@
             "group_XWypQL": {
               "type": "group",
               "settings": {
+                "size": {
+                },
+                "spacing": {
+                  "padding-block-start": "16px",
+                  "padding-inline-end": "16px",
+                  "padding-block-end": "16px",
+                  "padding-inline-start": "16px",
+                  "@media (--mobile)": {
+                    "padding-block-start": "16px",
+                    "padding-inline-end": "0px",
+                    "padding-block-end": "16px",
+                    "padding-inline-start": "0px"
+                  }
+                },
                 "layout": {
                   "flex-direction": "column",
                   "justify-content": "flex-start",
                   "align-items": "flex-start"
-                },
-                "spacing": {
-                  "padding": "16px",
-
-                  "@media (--mobile)": {
-                    "padding": "16px 0px"
-                  }
                 },
                 "color_scheme": "scheme-3"
               },
@@ -212,7 +285,11 @@
                   "settings": {
                     "heading": "Our mission",
                     "heading_size": "h3",
-                    "alignment": "start"
+                    "alignment": "start",
+                    "size": {
+                    },
+                    "spacing": {
+                    }
                   }
                 },
                 "text_mWDYXd": {
@@ -220,7 +297,11 @@
                   "settings": {
                     "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
                     "text_style": "",
-                    "alignment": "start"
+                    "alignment": "start",
+                    "size": {
+                    },
+                    "spacing": {
+                    }
                   }
                 }
               },
@@ -238,16 +319,19 @@
         "8a18b664-2c69-4e8a-b6ae-a5cf39d3ad38": {
           "type": "group",
           "settings": {
-            "layout": {
-              "flex-direction": "column",
-              "justify-content": "center",
-              "align-items": "center"
-            },
             "size": {
               "width": "100%"
             },
             "spacing": {
-              "padding": "0"
+              "padding-block-start": "0px",
+              "padding-inline-end": "0px",
+              "padding-block-end": "0px",
+              "padding-inline-start": "0px"
+            },
+            "layout": {
+              "flex-direction": "column",
+              "justify-content": "center",
+              "align-items": "center"
             },
             "color_scheme": "scheme-3"
           },
@@ -255,19 +339,21 @@
             "group_L9Ac4q": {
               "type": "group",
               "settings": {
-                "layout": {
-                  "flex-direction": "row",
-                  "justify-content": "center"
-                },
                 "size": {
                   "width": "50%",
-
                   "@media (--mobile)": {
                     "width": "100%"
                   }
                 },
                 "spacing": {
-                  "padding": "0"
+                  "padding-block-start": "0px",
+                  "padding-inline-end": "0px",
+                  "padding-block-end": "0px",
+                  "padding-inline-start": "0px"
+                },
+                "layout": {
+                  "flex-direction": "row",
+                  "justify-content": "center"
                 },
                 "color_scheme": "scheme-3"
               },
@@ -285,19 +371,21 @@
             "group_WQUiKt": {
               "type": "group",
               "settings": {
-                "layout": {
-                  "flex-direction": "row",
-                  "justify-content": "center"
-                },
                 "size": {
                   "width": "50%",
-
                   "@media (--mobile)": {
                     "width": "100%"
                   }
                 },
                 "spacing": {
-                  "padding": "0"
+                  "padding-block-start": "0px",
+                  "padding-inline-end": "0px",
+                  "padding-block-end": "0px",
+                  "padding-inline-start": "0px"
+                },
+                "layout": {
+                  "flex-direction": "row",
+                  "justify-content": "center"
                 },
                 "color_scheme": "scheme-3"
               },
@@ -311,6 +399,8 @@
                     "size": {
                       "width": "auto",
                       "flex-grow": "0"
+                    },
+                    "spacing": {
                     }
                   }
                 },
@@ -323,6 +413,8 @@
                     "size": {
                       "width": "auto",
                       "flex-grow": "0"
+                    },
+                    "spacing": {
                     }
                   }
                 }
@@ -344,15 +436,18 @@
         "group_VFkXXa",
         "8a18b664-2c69-4e8a-b6ae-a5cf39d3ad38"
       ],
+      "disabled": true,
       "settings": {
+        "spacing": {
+          "padding-block-start": "40px",
+          "padding-inline-end": "20px",
+          "padding-block-end": "40px",
+          "padding-inline-start": "20px"
+        },
         "layout": {
           "flex-direction": "column",
           "justify-content": "flex-start"
         },
-        "spacing": {
-          "padding": "40px 20px"
-        },
-
         "color_scheme": "scheme-3"
       }
     }
