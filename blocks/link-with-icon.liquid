@@ -6,25 +6,34 @@
   {%- endif -%}
   {{ block.shopify_attributes }}
 >
-  {%- comment -%}{% content_for "blocks" %}{%- endcomment -%}
-  {%- comment -%}{% assign icon_block = content_for "blocks" | where:'type': 'icon' %}{%- endcomment -%}
-  {%- comment -%}{% assign icon_block = content_for_blocks | where:'type', 'icon' %}{%- endcomment -%}
-  {%- comment -%}{% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}{%- endcomment -%}
-  {%- comment -%}{% assign icon_block = content_for_blocks | where:'type', '@theme' | where:'type', 'icon' %}{%- endcomment -%}
-  {%- comment -%}{% assign icon_block = content_for_blocks , type: "icon", id: "icon" %}{%- endcomment -%}
-  {%- comment -%}{% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}{%- endcomment -%}
+  {%- comment -%}Documented usage to render a block: 
+    {% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}
+  {%- endcomment -%}
   {% content_for "block" , type: "icon", id: "icon" %}
+
+  {% liquid
+    # works
+    assign type = "icon"
+    assign id = "icon"
+    content_for "block" , type: "icon", id: "icon"
+  %}
+
   {%- comment -%}
-    Variable usage in content_for "block" tag parameters do not work
+    Does not work Variable usage in content_for "block" tag parameters 
     {% liquid
       assign type = "icon"
       assign id = "icon"
     %}
     {% content_for "block" , type: type, id: id %}
   {%- endcomment -%}
-  {% liquid
-    content_for "block" , type: "icon", id: "icon"
-  %}
+  {%- comment -%}{% content_for "blocks" %}{%- endcomment -%}
+  {%- comment -%}{% assign icon_block = content_for "blocks" | where:'type': 'icon' %}{%- endcomment -%}
+  {%- comment -%}{% assign icon_block = content_for_blocks | where:'type', 'icon' %}{%- endcomment -%}
+  {%- comment -%}{% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}{%- endcomment -%}
+  {%- comment -%}{% assign icon_block = content_for_blocks | where:'type', '@theme' | where:'type', 'icon' %}{%- endcomment -%}
+  {%- comment -%}{% assign icon_block = content_for_blocks , type: "icon", id: "icon" %}{%- endcomment -%}
+
+
   {%- comment -%}{% assign icon_block = blocks | where:'type', 'icon' %}{%- endcomment -%}
   {%- comment -%}icon_block: {{ icon_block | json }}{%- endcomment -%}
   {% for block in blocks %}
