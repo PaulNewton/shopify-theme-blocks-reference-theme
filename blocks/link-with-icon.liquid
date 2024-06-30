@@ -10,6 +10,7 @@
   {%- comment -%}{% assign icon_block = content_for "blocks" | where:'type': 'icon' %}{%- endcomment -%}
   {%- comment -%}{% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}{%- endcomment -%}
   {% assign icon_block = section.blocks | where:'type', 'icon' %}
+  icon_block: {{ icon_block | json }}
   {% for block in section.blocks %}
     {% if block.type == 'icon' %}
       {%- comment -%}{{ block }}{%- endcomment -%}
