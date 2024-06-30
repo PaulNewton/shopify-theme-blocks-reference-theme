@@ -12,7 +12,7 @@
     block.type: {{ block.type }}<br><br>
     {%- comment -%}block: {{ block }}, block type: {{ block.type }}<br>{%- endcomment -%}
     {%- comment -%}block: {{ block | json }}<br>{%- endcomment -%}
-    block.settings.icon: {{ block.settings.icon }}<br>
+    block.settings.icon: {{ block.settings }}<br>
     {% if block.type == 'icon' %}    {%- endif -%}
       {% render block %}
 
