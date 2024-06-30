@@ -1,10 +1,16 @@
 <div>
+begin render icon_block
+  {%- comment -%}{% assign icon_block = block.blocks | where:'type', 'icon' %}{%- endcomment -%}
+{% assign icon_block = block.blocks | where:'name', 'icon' %}
+{% render icon_block %}
+end render icon_block <br><br>
+
 begin nested_block in block.blocks <br>
   {% for nested_block in block.blocks %}
     {%- comment -%}aka block in block.blocks{%- endcomment -%}
     {% render nested_block %}
   {% endfor %}
-end nested_block in block.blocks <br>
+end nested_block in block.blocks <br><br>
 
 begin parent block nested_block in parent.blocks <br>
 {% assign parent = block %}
