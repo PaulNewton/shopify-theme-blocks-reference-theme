@@ -73,10 +73,11 @@ end parent block nested_block in parent.blocks <br><br>
 
 
   {%- comment -%}{% assign icon_block = blocks | where:'type', 'icon' %}{%- endcomment -%}
-{%- comment -%}  {% assign icon_block = blocks | where:'name', 'icon' %}
+  {%- comment -%}{% assign icon_block = blocks | where:'name', 'icon' %}
   {% render icon_block %}
   end render icon_block <br>{%- endcomment -%}
   {%- comment -%}icon_block: {{ icon_block | json }}{%- endcomment -%}
+
   {% for block in block.blocks %}
     block: {{ block }}, block type: {{ block.type }}<br>
     block: {{ block | json }}<br>
