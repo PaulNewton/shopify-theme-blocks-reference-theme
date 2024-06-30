@@ -13,6 +13,37 @@
   "sections": {
     "custom_section_jX7KRk": {
       "type": "custom-section",
+      "blocks": {
+        "link_with_icon_NQtere": {
+          "type": "link-with-icon",
+          "settings": {
+            "link": "",
+            "label": "Link label",
+            "style_class": "link",
+            "open_in_new_tab": false,
+            "icon_position": "left",
+            "size": {
+            },
+            "spacing": {
+            }
+          },
+          "blocks": {
+            "icon_BDGrJP": {
+              "type": "icon",
+              "settings": {
+                "icon": "apple",
+                "width": 44
+              }
+            }
+          },
+          "block_order": [
+            "icon_BDGrJP"
+          ]
+        }
+      },
+      "block_order": [
+        "link_with_icon_NQtere"
+      ],
       "settings": {
         "spacing": {
           "padding-block-start": "0px",
