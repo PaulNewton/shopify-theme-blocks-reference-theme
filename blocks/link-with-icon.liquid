@@ -39,11 +39,29 @@
   {%- comment -%}{% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}{%- endcomment -%}
   {%- comment -%}{% assign icon_block = content_for_blocks | where:'type', '@theme' | where:'type', 'icon' %}{%- endcomment -%}
   {%- comment -%}{% assign icon_block = content_for_blocks , type: "icon", id: "icon" %}{%- endcomment -%}
-being nested_block in block.blocks <br>
+  {% for block in section.blocks %}
+  {% endfor %}
+  {% for block in blocks %}
+  {% endfor %}
+
+
+begin nested_block in block.blocks <br>
 {% for nested_block in block.blocks %}
     {% render nested_block %}
 {% endfor %}
 end nested_block in block.blocks <br>
+
+begin parent block nested_block in parent.blocks <br>
+{% assign parent = block %}
+{% for nested_block in parent.blocks %}
+   <div data-foo="parent.settings.bar">
+      {% render nested_block %}
+   </div>
+{% endfor %}
+end parent block nested_block in parent.blocks <br>
+
+
+
   {%- comment -%}{% assign icon_block = blocks | where:'type', 'icon' %}{%- endcomment -%}
   {%- comment -%}icon_block: {{ icon_block | json }}{%- endcomment -%}
   {% for block in blocks %}
