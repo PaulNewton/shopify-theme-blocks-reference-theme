@@ -17,7 +17,7 @@
         "link_with_icon_NQtere": {
           "type": "link-with-icon",
           "settings": {
-            "link": "",
+            "link": "https:\/\/themeblocksdevpreview2.myshopify.com\/",
             "label": "Link label",
             "style_class": "link",
             "open_in_new_tab": false,
