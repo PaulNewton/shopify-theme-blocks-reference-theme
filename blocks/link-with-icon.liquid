@@ -1,4 +1,5 @@
 {% assign icon_block = block.blocks | where:'name', 'icon' %}
+{% assign icon_block = block.blocks | where:'type', 'icon' %}
 {% render icon_block %}
 end render icon_block <br><br>
 <a
