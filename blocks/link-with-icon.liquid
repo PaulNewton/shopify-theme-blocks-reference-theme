@@ -13,8 +13,9 @@
   {%- comment -%}{% assign icon_block = blocks | where:'type', 'icon' %}{%- endcomment -%}
   icon_block: {{ icon_block | json }}
   {% for block in section.blocks %}
-    block: {{ block }}, block name: {{ block.name }}<br>
+    block: {{ block }}, block type: {{ block.type }}<br>
     block: {{ block | json }}<br>
+    block.settings.icon: {{ block.settings.icon }}<br>
     {% if block.type == 'icon' %}
       {%- comment -%}{{ block }}{%- endcomment -%}
       {%- if block.settings.icon != 'none' -%}
