@@ -83,6 +83,22 @@
       "default": false
     },
     {
+      "type": "select",
+      "id": "icon_position",
+      "label": "Icon position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Before"
+        },
+        {
+          "value": "right",
+          "label": "After"
+        }
+      ],
+      "default": "left"
+    },
+    {
       "type": "style.size_panel",
       "id": "size",
       "label": "Size",
@@ -145,10 +161,7 @@
       },
       "blocks": [
         {
-          "type": "icon",
-          "settings": {
-            "icon" : "arrow"
-          }
+          "type": "icon"
         }
       ]
     }
