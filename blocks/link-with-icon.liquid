@@ -81,6 +81,76 @@
       "id": "open_in_new_tab",
       "label": "Open this link in a new window",
       "default": false
+    },
+    {
+      "type": "style.size_panel",
+      "id": "size",
+      "label": "Size",
+      "default": {
+        "width": "auto",
+        "flex-grow": "0",
+        "flex-shrink": "0"
+      }
+    },
+    {
+      "type": "style.spacing_panel",
+      "id": "spacing",
+      "label": "Spacing",
+      "default": {
+        "padding": "0"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "Button (link with icon)",
+      "settings": {
+        "label": "Link label",
+        "style_class": "link"
+      }
+    },
+    {
+      "name": "Button (primary link with icon)",
+      "settings": {
+        "label": "Primary button label",
+        "spacing": {
+          "padding": "10px 30px"
+        }
+      }
+    },
+    {
+      "name": "Button - create account (primary link with icon)",
+      "settings": {
+        "label": "Create an account",
+        "style_class": "button-primary",
+        "spacing": {
+          "padding": "10px 30px"
+        }
+      },
+      "blocks": [
+        {
+          "type": "icon",
+          "settings": {
+            "icon" : "silhouette",
+          }
+        }
+      ]
+    },
+    {
+      "name": "Button (external link with icon)",
+      "settings": {
+        "spacing": {
+          "padding": "10px 30px"
+        }
+      },
+      "blocks": [
+        {
+          "type": "icon",
+          "settings": {
+            "icon" : "arrow"
+          }
+        }
+      ]
     }
   ]
 }
