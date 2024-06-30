@@ -1,3 +1,19 @@
+begin nested_block in block.blocks <br>
+{% for nested_block in block.blocks %}
+    {% render nested_block %}
+{% endfor %}
+end nested_block in block.blocks <br>
+
+begin parent block nested_block in parent.blocks <br>
+{% assign parent = block %}
+{%- comment -%}parent.settings: {{ parent.settings | json }}<br>{%- endcomment -%}
+{% for nested_block in parent.blocks %}
+   <div data-foo="parent.settings">
+      {% render nested_block %}
+   </div>
+{% endfor %}
+end parent block nested_block in parent.blocks <br>
+
 <a
   href="{{ block.settings.link }}"
   class="{{ block.settings | class_list }} link-block link-block-icon-{{ block.settings.icon_position }} {{ block.settings.style_class }}{% if block.settings.icon != "none" %} link--with-icon{% endif %}"
@@ -45,21 +61,7 @@
   {% endfor %}
 
 
-begin nested_block in block.blocks <br>
-{% for nested_block in block.blocks %}
-    {% render nested_block %}
-{% endfor %}
-end nested_block in block.blocks <br>
 
-begin parent block nested_block in parent.blocks <br>
-{% assign parent = block %}
-{%- comment -%}parent.settings: {{ parent.settings | json }}<br>{%- endcomment -%}
-{% for nested_block in parent.blocks %}
-   <div data-foo="parent.settings">
-      {% render nested_block %}
-   </div>
-{% endfor %}
-end parent block nested_block in parent.blocks <br>
 
 
 
