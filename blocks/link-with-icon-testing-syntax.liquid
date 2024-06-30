@@ -107,6 +107,38 @@ end parent block nested_block in parent.blocks <br><br>
     {%- endif -%}
   {% endfor %}
 
+  {%- comment -%}Does not work because we cannot get ANY internals of child blocks, not even the actual type we only get @theme{%- endcomment -%}
+  {% for nested_block in block.blocks %}
+    {%- comment -%}{{ nested_block }}{%- endcomment -%}
+    nested_block.type: {{ nested_block.type }}<br><br>
+    {%- comment -%}nested_block: {{ nested_block }}, nested_block type: {{ nested_block.type }}<br>{%- endcomment -%}
+    {%- comment -%}nested_block: {{ nested_block | json }}<br>{%- endcomment -%}
+    nested_block.settings.icon: {{ nested_block.settings | json }}<br>
+
+    {% if nested_block.type == 'icon' %}  nested_block.type == 'icon'  {%- endif -%}
+
+    {%- if nested_block.settings.icon != 'none' -%}
+      <svg
+        class="icon"
+        aria-hidden="true"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        {{ nested_block.shopify_attributes }}
+      >
+        {%- render 'icon', icon: nested_block.settings.icon -%}
+      </svg>
+    {%- elsif nested_block.settings.image_upload != blank -%}
+      {{
+        nested_block.settings.image_upload
+        | image_url: width: 500
+        | image_tag: widths: '50, 100, 200, 300, 400, 500', class: icon_block_class
+      }}
+    {%- endif -%}
+  {% endfor %}
+
   {{ block.settings.label }}
 </a>
 
