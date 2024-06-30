@@ -9,14 +9,15 @@
   {%- comment -%}{% content_for "blocks" %}{%- endcomment -%}
 
   {% for block in block.blocks %}
-    block.type: {{ block.type }}<br><br>
-    {%- comment -%}block: {{ block }}, block type: {{ block.type }}<br>{%- endcomment -%}
-    {%- comment -%}block: {{ block | json }}<br>{%- endcomment -%}
-    block.settings.icon: {{ block.settings }}<br>
-    {% if block.type == 'icon' %}    {%- endif -%}
       {% render block %}
 
       {%- comment -%}{{ block }}{%- endcomment -%}
+      block.type: {{ block.type }}<br><br>
+      {%- comment -%}block: {{ block }}, block type: {{ block.type }}<br>{%- endcomment -%}
+      {%- comment -%}block: {{ block | json }}<br>{%- endcomment -%}
+      block.settings.icon: {{ block.settings | json }}<br>
+      {% if block.type == 'icon' %}  block.type == 'icon'  {%- endif -%}
+
       {%- if block.settings.icon != 'none' -%}
         <svg
           class="icon"
