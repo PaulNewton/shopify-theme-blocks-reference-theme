@@ -1,0 +1,87 @@
+<a
+  href="{{ block.settings.link }}"
+  class="{{ block.settings | class_list }} link-block link-block-icon-{{ block.settings.icon_position }} {{ block.settings.style_class }}{% if block.settings.icon != "none" %} link--with-icon{% endif %}"
+  {%- if block.settings.open_in_new_tab -%}
+    target="_blank" rel="noopener noreferrer"
+  {%- endif -%}
+  {{ block.shopify_attributes }}
+>
+  {%- comment -%}{% content_for "blocks" %}{%- endcomment -%}
+  {%- comment -%}{% assign icon_block = content_for "blocks" | where:'type': 'icon' %}{%- endcomment -%}
+  {%- comment -%}{% content_for "block", type: "slideshow-controls", id: "slideshow-controls" %}{%- endcomment -%}
+  {% assign icon_block = section.blocks | where:'type', 'icon' %}
+  {% for block in section.blocks %}
+    {% if block.type == 'icon' %}
+      {%- comment -%}{{ block }}{%- endcomment -%}
+      {%- if block.settings.icon != 'none' -%}
+        <svg
+          class="icon"
+          aria-hidden="true"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          {{ block.shopify_attributes }}
+        >
+          {%- render 'icon', icon: block.settings.icon -%}
+        </svg>
+      {%- elsif block.settings.image_upload != blank -%}
+        {{
+          block.settings.image_upload
+          | image_url: width: 500
+          | image_tag: widths: '50, 100, 200, 300, 400, 500', class: icon_block_class
+        }}
+      {%- endif -%}
+    {%- endif -%}
+  {% endfor %}
+
+  {{ block.settings.label }}
+</a>
+
+{% schema %}
+{
+  "name": "Link with icon",
+  "tag": null,
+  "blocks": [{ "type": "icon" }],
+  "settings": [
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "Button label"
+    },
+    {
+      "type": "select",
+      "id": "style_class",
+      "label": "Style",
+      "options": [
+        {
+          "value": "button",
+          "label": "Solid"
+        },
+        {
+          "value": "button-secondary",
+          "label": "Outline"
+        },
+        {
+          "value": "link",
+          "label": "Link"
+        }
+      ],
+      "default": "button"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_in_new_tab",
+      "label": "Open this link in a new window",
+      "default": false
+    }
+  ]
+}
+{% endschema %}
