@@ -1,3 +1,4 @@
+<div>
 begin nested_block in block.blocks <br>
 {% for nested_block in block.blocks %}
     {% render nested_block %}
@@ -13,6 +14,7 @@ begin parent block nested_block in parent.blocks <br>
    </div>
 {% endfor %}
 end parent block nested_block in parent.blocks <br>
+<div>
 
 <a
   href="{{ block.settings.link }}"
