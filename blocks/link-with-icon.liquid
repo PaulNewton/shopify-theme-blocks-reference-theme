@@ -10,7 +10,7 @@ begin parent block nested_block in parent.blocks <br>
 {% assign parent = block %}
 {%- comment -%}parent.settings: {{ parent.settings | json }}<br>{%- endcomment -%}
 {% for nested_block in parent.blocks %}
-   <div data-foo='{{parent.settings }}'>
+   <div data-parent-settings-json-url-escaped="{{parent.settings | json | url_escape }}" data-parent-settings-json-single-quoted-attribute-value='{{ parent.settings }}'>
       {% render nested_block %}
    </div>
 {% endfor %}
