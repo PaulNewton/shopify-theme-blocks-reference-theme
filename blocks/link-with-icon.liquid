@@ -1,5 +1,5 @@
 {%- comment -%}{% assign icon_block = block.blocks | where:'type', 'icon' %}{%- endcomment -%}
-{% assign icon_block = block.blocks | where:'type', 'Icon' %}
+{% assign icon_block = block.blocks | where:'name', 'icon' %}
 {% render icon_block %}
 end render icon_block <br><br>
 
@@ -11,7 +11,6 @@ end render icon_block <br><br>
   {%- endif -%}
   {{ block.shopify_attributes }}
 >
-
   {%- comment -%}{% content_for "blocks" %}{%- endcomment -%}
 
   {% for block in block.blocks %}
