@@ -9,6 +9,7 @@
   {%- comment -%}{% content_for "blocks" %}{%- endcomment -%}
 
   {% for block in block.blocks %}
+    block.type: {{ block.type }}<br><br>
     {%- comment -%}block: {{ block }}, block type: {{ block.type }}<br>{%- endcomment -%}
     {%- comment -%}block: {{ block | json }}<br>{%- endcomment -%}
     {%- comment -%}block.settings.icon: {{ block.settings.icon }}<br>{%- endcomment -%}
