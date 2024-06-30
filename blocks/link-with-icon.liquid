@@ -53,9 +53,9 @@ end nested_block in block.blocks <br>
 
 begin parent block nested_block in parent.blocks <br>
 {% assign parent = block %}
-parent.settings: {{ parent.settings | json }}<br>
+{%- comment -%}parent.settings: {{ parent.settings | json }}<br>{%- endcomment -%}
 {% for nested_block in parent.blocks %}
-   <div data-foo="parent.settings.bar">
+   <div data-foo="parent.settings">
       {% render nested_block %}
    </div>
 {% endfor %}
