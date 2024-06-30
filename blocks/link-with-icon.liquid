@@ -9,7 +9,8 @@
   {%- comment -%}{% content_for "blocks" %}{%- endcomment -%}
 
   {%- for block in block.blocks -%}
-    {% render block %}
+    {%- if forloop.index != 1 %} {% continue %}{%- endif -%}
+    {%- render block -%}
   {%- endfor -%}
   {{ block.settings.label }}
 </a>
