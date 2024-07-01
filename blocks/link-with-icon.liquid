@@ -12,9 +12,9 @@
     {%- comment -%}Statically render block: icon{%- endcomment -%}
     {% content_for "block", type: "icon" , id:"icon" %}
   {% endif %}
+        {% content_for "blocks" %}
 
   {% if section.blocks.size > 1 %}
-    {% content_for "blocks" %}
     {%- assign alternate_blocks_rendering = 'none' %}
     {% case alternate_blocks_rendering %}
       {% when 'limited-loop' %}
