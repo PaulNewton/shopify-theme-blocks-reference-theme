@@ -7,14 +7,14 @@
 
   {% liquid
     # note no standard way to get object type https://shopify.dev/docs/api/liquid/objects/link#link-type
-    # assign listing_object = block.settings.product | default: block.settings.collection
+    # assign object = block.settings.product | default: block.settings.collection
     if block.settings.product != blank
       assign product = block.settings.product
     endif
     if block.settings.collection != blank
       assign collection = block.settings.collection
     endif
-    assign listing_object = product | default: collection
+    assign object = product | default: collection
   %}
 
   {%- if collection -%}
@@ -33,21 +33,21 @@
     {%- endcapture -%}
   {%- endif -%}
 
-  {%- if listing_object != blank -%}
+  {%- if object != blank -%}
     <div class="resource-card__image-wrapper">
-      {%- if listing_object.featured_image -%}
+      {%- if object.featured_image -%}
         {{
-          listing_object.featured_image
+          object.featured_image
           | image_url: width: 1000
           | image_tag: widths: '200, 400, 800, 1000'
         }}
       {%- endif -%}
     </div>
-    <a href="{{ listing_object.url }}" class="link{%- if collection -%}--with-icon {% endif %}">
-      {{ listing_object.title }}
+    <a href="{{ object.url }}" class="link{%- if collection -%}--with-icon {% endif %}">
+      {{ object.title }}
       {{ collection_svg_arrow }}
     </a>
-    {%- if product -%}<p>{{ listing_object.price | money_with_currency }}</p>{%- endif -%}
+    {%- if product -%}<p>{{ object.price | money_with_currency }}</p>{%- endif -%}
   {%- else -%}
     <div
       class="resource-card__image-wrapper placeholder-image"
