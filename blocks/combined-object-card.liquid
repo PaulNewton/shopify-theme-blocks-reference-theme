@@ -17,7 +17,23 @@
     assign listing_object = product | default: collection
   %}
 
-  {% if listing_object != blank %}
+  {%- if collection -%}
+    {%- capture collection_svg_arrow -%}
+      <svg
+        class="icon"
+        aria-hidden="true"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+      >
+        {%- render 'icon', icon: 'arrow' -%}
+      </svg>
+    {%- endcapture -%}
+  {%- endif -%}
+
+  {%- if listing_object != blank -%}
     <div class="resource-card__image-wrapper">
       {%- if listing_object.featured_image -%}
         {{
@@ -29,6 +45,7 @@
     </div>
     <a href="{{ listing_object.url }}" class="link{%- if collection -%}--with-icon {% endif %}">
       {{ listing_object.title }}
+      {{ collection_svg_arrow }}
     </a>
     {%- if product -%}<p>{{ listing_object.price | money_with_currency }}</p>{%- endif -%}
   {%- else -%}
@@ -36,11 +53,22 @@
       class="resource-card__image-wrapper placeholder-image"
       style="aspect-ratio:{% if block.settings.ratio == 'auto' %}1{% else %}{{ block.settings.ratio }}{% endif %};"
     >
-      {{ 'product-apparel-1' | placeholder_svg_tag: 'product-placeholder-svg' }}
+      {%- if product -%}
+        {{- 'product-apparel-1' | placeholder_svg_tag: 'product-placeholder-svg' -}}
+      {%- else -%}
+        {{- 'collection-apparel-1' | placeholder_svg_tag: 'product-placeholder-svg' -}}
+      {%- endif -%}
     </div>
-    <a href="#" class="link">Example product title </a>
-    <p>{{ 1999 | money_with_currency }}</p>
-  {% endif %}
+    <a href="#" class="link{%- if collection -%}--with-icon {% endif %}">
+      {%- if product -%}
+        Example product title
+      {%- elsif collection -%}
+        <span>Your collection's name</span>
+        {{- svg_arrow -}}
+      {%- endif -%}
+    </a>
+    {%- if product -%}<p>{{ 1999 | money_with_currency }}</p>{%- endif -%}
+  {%- endif -%}
 </div>
 
 {% schema %}
