@@ -10,7 +10,7 @@
 
   {% if section.blocks.size == 1 %}
     {%- comment -%}Statically render block: icon{%- endcomment -%}
-    {% content_for "block", type: "icon" , id:"icon" %}
+    {%- comment -%}{% content_for "block", type: "icon" , id:"icon" %}{%- endcomment -%}
   {% endif %}
 
   {% if section.blocks.size > 1 %}
