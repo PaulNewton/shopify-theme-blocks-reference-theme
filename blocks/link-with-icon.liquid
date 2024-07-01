@@ -15,6 +15,7 @@
 
   {% content_for "blocks" %}
 
+
   {% if section.blocks.size > 1 %}
     {%- assign alternate_blocks_rendering = 'none' %}
     {% case alternate_blocks_rendering %}
@@ -33,8 +34,8 @@
       {% else %}
     {% endcase %}
   {% endif %}
-section.blocks: {{ section.blocks }}
-section.blocks.size: {{ section.blocks.size }}
+block.blocks: {{ block.blocks }}
+block.blocks.size: {{ block.blocks.size }}
 <br>
   {{ block.settings.label }}
 </a>
