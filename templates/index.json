@@ -9,6 +9,55 @@
 */
 {
   "sections": {
+    "custom_section_L7qTq6": {
+      "type": "custom-section",
+      "blocks": {
+        "link_with_icon_rHDjTE": {
+          "type": "link-with-icon",
+          "settings": {
+            "link": "",
+            "label": "Link label",
+            "style_class": "link",
+            "open_in_new_tab": false,
+            "icon_position": "left",
+            "size": {
+            },
+            "spacing": {
+            }
+          },
+          "blocks": {
+            "icon_kjd9r8": {
+              "type": "icon",
+              "settings": {
+                "icon": "apple",
+                "width": 44
+              }
+            },
+            "icon": {
+              "type": "icon",
+              "static": true,
+              "settings": {
+                "icon": "apple",
+                "width": 44
+              }
+            }
+          },
+          "block_order": [
+            "icon_kjd9r8"
+          ]
+        }
+      },
+      "block_order": [
+        "link_with_icon_rHDjTE"
+      ],
+      "settings": {
+        "spacing": {
+        },
+        "layout": {
+        },
+        "color_scheme": ""
+      }
+    },
     "slideshow_UNkwik": {
       "type": "slideshow",
       "blocks": {
@@ -1217,6 +1266,7 @@
     }
   },
   "order": [
+    "custom_section_L7qTq6",
     "slideshow_UNkwik",
     "65a25908-415f-40aa-a6d4-00985cafbfac",
     "custom_section_6gDiLb",

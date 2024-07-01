@@ -11,48 +11,6 @@
   "type": "header",
   "name": "Header",
   "sections": {
-    "custom_section_99yHaG": {
-      "type": "custom-section",
-      "blocks": {
-        "link_with_icon_qrm3Rp": {
-          "type": "link-with-icon",
-          "settings": {
-            "link": "",
-            "label": "Link label",
-            "style_class": "link",
-            "open_in_new_tab": false,
-            "icon_position": "left",
-            "size": {
-            },
-            "spacing": {
-            }
-          },
-          "blocks": {
-            "icon": {
-              "type": "icon",
-              "static": true,
-              "settings": {
-                "icon": "apple",
-                "width": 44
-              }
-            }
-          },
-          "block_order": [
-
-          ]
-        }
-      },
-      "block_order": [
-        "link_with_icon_qrm3Rp"
-      ],
-      "settings": {
-        "spacing": {
-        },
-        "layout": {
-        },
-        "color_scheme": ""
-      }
-    },
     "40cdc232-8dd8-427c-b8ab-98fcf3523e60": {
       "type": "custom-section",
       "blocks": {
@@ -239,7 +197,6 @@
     }
   },
   "order": [
-    "custom_section_99yHaG",
     "40cdc232-8dd8-427c-b8ab-98fcf3523e60",
     "f80fab76-22f9-452e-ad08-16b13cc02cd6"
   ]
