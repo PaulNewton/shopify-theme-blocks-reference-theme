@@ -11,67 +11,6 @@
   "type": "header",
   "name": "Header",
   "sections": {
-    "custom_section_jX7KRk": {
-      "type": "custom-section",
-      "blocks": {
-        "link_with_icon_NQtere": {
-          "type": "link-with-icon",
-          "settings": {
-            "link": "https:\/\/themeblocksdevpreview2.myshopify.com\/",
-            "label": "Link label",
-            "style_class": "link",
-            "open_in_new_tab": false,
-            "icon_position": "left",
-            "size": {
-            },
-            "spacing": {
-            }
-          },
-          "blocks": {
-            "icon_BDGrJP": {
-              "type": "icon",
-              "settings": {
-                "icon": "apple",
-                "width": 44
-              }
-            },
-            "icon_Yrqw8j": {
-              "type": "icon",
-              "settings": {
-                "icon": "banana",
-                "width": 44
-              }
-            },
-            "icon_49AHLq": {
-              "type": "icon",
-              "settings": {
-                "icon": "bottle",
-                "width": 44
-              }
-            }
-          },
-          "block_order": [
-            "icon_BDGrJP",
-            "icon_Yrqw8j",
-            "icon_49AHLq"
-          ]
-        }
-      },
-      "block_order": [
-        "link_with_icon_NQtere"
-      ],
-      "settings": {
-        "spacing": {
-          "padding-block-start": "0px",
-          "padding-block-end": "0px",
-          "padding-inline-start": "0px",
-          "padding-inline-end": "0px"
-        },
-        "layout": {
-        },
-        "color_scheme": ""
-      }
-    },
     "40cdc232-8dd8-427c-b8ab-98fcf3523e60": {
       "type": "custom-section",
       "blocks": {
@@ -97,7 +36,6 @@
       "block_order": [
         "9358ead7-959e-4cdd-b971-5a08e53c7729"
       ],
-      "disabled": true,
       "settings": {
         "spacing": {
           "padding-block-start": "24px",
@@ -122,11 +60,11 @@
           "settings": {
             "size": {
               "width": "20%",
-              "height": "100%",
-              "flex-basis": "25%",
               "@media (--mobile)": {
                 "width": "100%"
-              }
+              },
+              "height": "100%",
+              "flex-basis": "25%"
             },
             "spacing": {
               "padding-block-start": "0px",
@@ -241,7 +179,6 @@
         "group_QwzE6T",
         "group_MMGbDg"
       ],
-      "disabled": true,
       "settings": {
         "spacing": {
           "padding-block-start": "30px",
@@ -258,7 +195,6 @@
     }
   },
   "order": [
-    "custom_section_jX7KRk",
     "40cdc232-8dd8-427c-b8ab-98fcf3523e60",
     "f80fab76-22f9-452e-ad08-16b13cc02cd6"
   ]

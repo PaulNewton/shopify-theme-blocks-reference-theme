@@ -8,10 +8,21 @@
 >
   {%- comment -%}{% content_for "blocks" %}{%- endcomment -%}
 
-  {%- for block in block.blocks -%}
-    {%- comment -%}{%- if forloop.index != 1 %} {% continue %}{%- endif -%}{%- endcomment -%}
+  {%- comment -%}Statically render block: icon{%- endcomment -%}
+  {% content_for "blocks", type: "icon" %}
+
+  {%- comment -%}limit blocks forloop to first block in blocks{%- endcomment -%}
+  {%- for block in block.blocks limit: 1 -%}
+    {%- if forloop.index != 1 %} {% continue %}{%- endif -%}
     {%- render block -%}
   {%- endfor -%}
+
+  {%- comment -%}skip all blocks after the first block in blocks {%- endcomment -%}
+  {%- for block in block.blocks -%}
+    {%- if forloop.index != 1 %}{% continue %}{%- endif -%}
+    {%- render block -%}
+  {%- endfor -%}
+
   {{ block.settings.label }}
 </a>
 
