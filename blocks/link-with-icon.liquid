@@ -9,19 +9,23 @@
   {%- comment -%}{% content_for "blocks" %}{%- endcomment -%}
 
   {%- comment -%}Statically render block: icon{%- endcomment -%}
-  {% content_for "blocks", type: "icon" %}
+  {% content_for "block", type: "icon" , id:"icon" %}
 
-  {%- comment -%}limit blocks forloop to first block in blocks{%- endcomment -%}
-  {%- for block in block.blocks limit: 1 -%}
-    {%- if forloop.index != 1 %} {% continue %}{%- endif -%}
-    {%- render block -%}
-  {%- endfor -%}
-
-  {%- comment -%}skip all blocks after the first block in blocks {%- endcomment -%}
-  {%- for block in block.blocks -%}
-    {%- if forloop.index != 1 %}{% continue %}{%- endif -%}
-    {%- render block -%}
-  {%- endfor -%}
+  {%- assign alternate_blocks_rendering = 'none' %}
+  {% case alternate_blocks_rendering %}
+    {% when 'limited-loop' %}
+      {%- comment -%}limit blocks forloop to first block in blocks{%- endcomment -%}
+      {%- for block in block.blocks limit: 1 -%}
+        {%- if forloop.index != 1 %} {% continue %}{%- endif -%}
+        {%- render block -%}
+      {%- endfor -%}
+    {% when 'only-first-loop' %}
+      {%- comment -%}skip all blocks after the first block in blocks {%- endcomment -%}
+      {%- for block in block.blocks -%}
+        {%- if forloop.index != 1 %}{% continue %}{%- endif -%}
+        {%- render block -%}
+      {%- endfor -%}
+  {% endcase %}
 
   {{ block.settings.label }}
 </a>
