@@ -13,6 +13,53 @@
   "sections": {
     "custom_section_99yHaG": {
       "type": "custom-section",
+      "blocks": {
+        "link_with_icon_qrm3Rp": {
+          "type": "link-with-icon",
+          "settings": {
+            "link": "",
+            "label": "Link label",
+            "style_class": "link",
+            "open_in_new_tab": false,
+            "icon_position": "left",
+            "size": {
+            },
+            "spacing": {
+            }
+          },
+          "blocks": {
+            "icon_ipBW3E": {
+              "type": "icon",
+              "settings": {
+                "icon": "apple",
+                "width": 44
+              }
+            },
+            "icon_T63gwU": {
+              "type": "icon",
+              "settings": {
+                "icon": "banana",
+                "width": 44
+              }
+            },
+            "icon_T9DMme": {
+              "type": "icon",
+              "settings": {
+                "icon": "bottle",
+                "width": 44
+              }
+            }
+          },
+          "block_order": [
+            "icon_ipBW3E",
+            "icon_T63gwU",
+            "icon_T9DMme"
+          ]
+        }
+      },
+      "block_order": [
+        "link_with_icon_qrm3Rp"
+      ],
       "settings": {
         "spacing": {
         },
