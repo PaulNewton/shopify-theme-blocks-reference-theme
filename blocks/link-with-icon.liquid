@@ -8,24 +8,34 @@
 >
   {%- comment -%}{% content_for "blocks" %}{%- endcomment -%}
 
-  {%- comment -%}Statically render block: icon{%- endcomment -%}
-  {% content_for "block", type: "icon" , id:"icon" %}
+  {% if section.blocks.size == 1 %}
+    {%- comment -%}Statically render block: icon{%- endcomment -%}
+    {% content_for "block", type: "icon" , id:"icon" %}
+  {% endif %}
 
-  {%- assign alternate_blocks_rendering = 'none' %}
-  {% case alternate_blocks_rendering %}
-    {% when 'limited-loop' %}
-      {%- comment -%}limit blocks forloop to first block in blocks{%- endcomment -%}
-      {%- for block in block.blocks limit: 1 -%}
-        {%- if forloop.index != 1 %} {% continue %}{%- endif -%}
-        {%- render block -%}
-      {%- endfor -%}
-    {% when 'only-first-loop' %}
-      {%- comment -%}skip all blocks after the first block in blocks {%- endcomment -%}
-      {%- for block in block.blocks -%}
-        {%- if forloop.index != 1 %}{% continue %}{%- endif -%}
-        {%- render block -%}
-      {%- endfor -%}
-  {% endcase %}
+  {% if section.blocks.size > 1 %}
+    {%- assign alternate_blocks_rendering = 'none' %}
+    {% case alternate_blocks_rendering %}
+      {% when 'limited-loop' %}
+        {%- comment -%}limit blocks forloop to first block in blocks{%- endcomment -%}
+        {%- for block in block.blocks limit: 1 -%}
+          {%- if forloop.index != 1 %} {% continue %}{%- endif -%}
+          {%- render block -%}
+        {%- endfor -%}
+      {% when 'only-first-loop' %}
+        {%- comment -%}skip all blocks after the first block in blocks {%- endcomment -%}
+        {%- for block in block.blocks -%}
+          {%- if forloop.index != 1 %}{% continue %}{%- endif -%}
+          {%- render block -%}
+        {%- endfor -%}
+      {% else %}
+        {%- comment -%}skip all blocks after the first block in blocks {%- endcomment -%}
+        {%- for block in block.blocks -%}
+          {%- render block -%}
+        {%- endfor -%}
+    {% endcase %}
+  {% endif %}
+
 
   {{ block.settings.label }}
 </a>
