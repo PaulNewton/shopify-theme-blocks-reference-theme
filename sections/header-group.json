@@ -28,32 +28,17 @@
             }
           },
           "blocks": {
-            "icon_ipBW3E": {
+            "icon": {
               "type": "icon",
+              "static": true,
               "settings": {
                 "icon": "apple",
-                "width": 44
-              }
-            },
-            "icon_T63gwU": {
-              "type": "icon",
-              "settings": {
-                "icon": "banana",
-                "width": 44
-              }
-            },
-            "icon_T9DMme": {
-              "type": "icon",
-              "settings": {
-                "icon": "bottle",
                 "width": 44
               }
             }
           },
           "block_order": [
-            "icon_ipBW3E",
-            "icon_T63gwU",
-            "icon_T9DMme"
+
           ]
         }
       },
